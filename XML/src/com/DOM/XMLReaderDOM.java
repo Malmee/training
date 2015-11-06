@@ -25,7 +25,7 @@ package com.DOM;
 public class XMLReaderDOM {
 
     public static void main(String[] args) {
-        String filePath = "src/employee.xml";
+        String filePath = "src/com/DOM/employee.xml";
         File xmlFile = new File(filePath);
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder;

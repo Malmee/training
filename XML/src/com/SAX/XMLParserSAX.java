@@ -3,18 +3,15 @@ package com.SAX;
 /**
  * Created by malmee on 11/4/15.
  */
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
+
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
-
-import com.SAX.Employee;
-import com.SAX.MyHandler;
-import org.xml.sax.SAXException;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 public class XMLParserSAX {
 
@@ -23,7 +20,7 @@ public class XMLParserSAX {
         try {
             SAXParser saxParser = saxParserFactory.newSAXParser();
             MyHandler handler = new MyHandler();
-            saxParser.parse(new File("src/employees.xml"), handler);
+            saxParser.parse(new File("src/com/SAX/employees.xml"), handler);
             //Get Employees list
             List<Employee> empList = handler.getEmpList();
             //print employee information
